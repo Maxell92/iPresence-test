@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\ApiResource;
 
-use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -33,15 +32,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 final class Shout
 {
     /**
-     * @ApiProperty(identifier=true)
-     *
-     * Identifier has to be provided for API Platform even if we do not use it.
-     *
-     * @var string
-     */
-    private $id = 'Shout';
-
-    /**
      * @var string
      *
      * @Assert\NotNull
@@ -56,11 +46,6 @@ final class Shout
      * @Assert\GreaterThan(0)
      */
     private $amount;
-
-    public function getId(): string
-    {
-        return $this->id;
-    }
 
     public function getAuthor(): string
     {
