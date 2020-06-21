@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6e738ae14360465a97245cb353d2e50",
+    "content-hash": "0fc932b9a0f02f0f831d2fafba99a86e",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -6117,6 +6117,55 @@
                 }
             ],
             "time": "2020-06-04T11:16:35+00:00"
+        },
+        {
+            "name": "dg/bypass-finals",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dg/bypass-finals.git",
+                "reference": "d861d8c799842b1c32690ec1baf074f1d4b24a43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dg/bypass-finals/zipball/d861d8c799842b1c32690ec1baf074f1d4b24a43",
+                "reference": "d861d8c799842b1c32690ec1baf074f1d4b24a43",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.3",
+                "phpstan/phpstan": "^0.12"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                }
+            ],
+            "description": "Removes final keyword from source code on-the-fly and allows mocking of final methods and classes",
+            "keywords": [
+                "finals",
+                "mocking",
+                "phpunit",
+                "testing",
+                "unit"
+            ],
+            "time": "2020-05-14T14:34:45+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",

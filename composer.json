@@ -16,6 +16,7 @@
         "symfony/yaml": "5.1.*"
     },
     "require-dev": {
+        "dg/bypass-finals": "^1.2",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.12.30",
         "phpstan/phpstan-phpunit": "^0.12.11",
