@@ -7,7 +7,7 @@ namespace App\Source;
 use App\DataCollection\AuthorCollection;
 use App\Exception\InvalidResourceException;
 
-final class AuthorFileSource
+final class AuthorFileSource implements AuthorSourceInterface
 {
     /**
      * @var string
