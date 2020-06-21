@@ -91,11 +91,7 @@ final class ShoutTest extends BaseTestCase
      */
     public function _invalidAmountGraterThanMaximumProvider(): array
     {
-        return [
-            [11],
-            [100],
-            [1000],
-        ];
+        return [[11], [100], [1000]];
     }
 
     /**
@@ -118,10 +114,6 @@ final class ShoutTest extends BaseTestCase
      */
     public function _invalidAmountLowerThanLimitProvider(): array
     {
-        return [
-            [0],
-            [-1],
-            [-111],
-        ];
+        return [[0], [-1], [-111]];
     }
 }

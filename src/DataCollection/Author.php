@@ -42,7 +42,10 @@ final class Author
     {
         $count = count($this->quotes);
         if ($amount > $count) {
-            throw new NotEnoughQuotesException(sprintf('Not enough quotes for given author. Maximum quotes: %s', $count));
+            throw new NotEnoughQuotesException(sprintf(
+                'Not enough quotes for given author. Maximum quotes: %s',
+                $count
+            ));
         }
 
         $i = 1;

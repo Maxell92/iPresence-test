@@ -32,35 +32,35 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 final class Shout
 {
-	/**
-	 * @ApiProperty(identifier=true)
-	 *
-	 * Identifier has to be provided for API Platform even if we do not use it.
-	 *
-	 * @var string
-	 */
-	private $id = 'Shout';
+    /**
+     * @ApiProperty(identifier=true)
+     *
+     * Identifier has to be provided for API Platform even if we do not use it.
+     *
+     * @var string
+     */
+    private $id = 'Shout';
 
-	/**
-	 * @var string
-	 *
-	 * @Assert\NotNull
-	 */
-	private $author;
+    /**
+     * @var string
+     *
+     * @Assert\NotNull
+     */
+    private $author;
 
-	/**
-	 * @var int
-	 *
-	 * @Assert\NotNull
+    /**
+     * @var int
+     *
+     * @Assert\NotNull
      * @Assert\LessThanOrEqual(10)
      * @Assert\GreaterThan(0)
-	 */
-	private $amount;
+     */
+    private $amount;
 
-	public function getId(): string
-	{
-		return $this->id;
-	}
+    public function getId(): string
+    {
+        return $this->id;
+    }
 
     public function getAuthor(): string
     {

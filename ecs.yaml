@@ -1,0 +1,20 @@
+services:
+  PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
+    syntax: short
+
+parameters:
+  paths:
+    - 'src'
+    - 'tests'
+  sets:
+    - 'clean-code'
+    - 'common'
+    - 'dead-code'
+    - 'php71'
+    - 'psr12'
+    - 'symfony-risky'
+    - 'symfony'
+    - 'symplify'
+  exclude_files:
+    - 'src/Kernel.php'
+    - 'src/Migrations/*'

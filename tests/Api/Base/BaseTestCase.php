@@ -25,9 +25,7 @@ abstract class BaseTestCase extends ApiTestCase
 
         $content = $response->getContent();
 
-        $data = json_decode($content, true);
-
-        return $data;
+        return json_decode($content, true);
     }
 
     /**
@@ -45,9 +43,7 @@ abstract class BaseTestCase extends ApiTestCase
 
         $content = $response->getContent(false);
 
-        $data = json_decode($content, true);
-
-        return $data;
+        return json_decode($content, true);
     }
 
     /**
@@ -57,14 +53,8 @@ abstract class BaseTestCase extends ApiTestCase
     {
         $client = HttpClient::create();
 
-        $response = $client->request(
-            'POST',
-            sprintf("http://localhost/Ipresence/public%s", $url),
-            [
-                'json' => $data
-            ]
-        );
-
-        return $response;
+        return $client->request('POST', sprintf('http://localhost/Ipresence/public%s', $url), [
+            'json' => $data,
+        ]);
     }
 }

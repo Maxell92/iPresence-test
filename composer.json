@@ -20,7 +20,8 @@
         "phpstan/phpstan": "^0.12.30",
         "phpstan/phpstan-phpunit": "^0.12.11",
         "phpstan/phpstan-symfony": "^0.12.6",
-        "symfony/test-pack": "^1.0"
+        "symfony/test-pack": "^1.0",
+        "symplify/easy-coding-standard": "^7.2"
     },
     "config": {
         "optimize-autoloader": true,

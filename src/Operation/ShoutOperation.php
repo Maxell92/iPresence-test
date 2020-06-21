@@ -28,10 +28,10 @@ final class ShoutOperation
      * @throws InvalidResourceException
      * @throws NotEnoughQuotesException
      */
-	public function shout(Shout $shout): JsonResponse
-	{
-	    $author = $this->authorRepository->getAuthorData($shout->getAuthor());
+    public function shout(Shout $shout): JsonResponse
+    {
+        $author = $this->authorRepository->getAuthorData($shout->getAuthor());
 
-		return new JsonResponse($author->shoutQuotes($shout->getAmount()));
-	}
+        return new JsonResponse($author->shoutQuotes($shout->getAmount()));
+    }
 }

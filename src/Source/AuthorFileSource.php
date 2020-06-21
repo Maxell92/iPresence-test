@@ -25,13 +25,13 @@ final class AuthorFileSource
     public function getAuthorDataCollection(): AuthorCollection
     {
         $fp = fopen($this->resource, 'rb');
-        if (!$fp) {
+        if (! $fp) {
             throw new InvalidResourceException('Authors cannot be loaded.');
         }
         $content = fread($fp, (int) filesize($this->resource));
         fclose($fp);
 
-        if (!$content) {
+        if (! $content) {
             throw new InvalidResourceException('Authors cannot be loaded.');
         }
 

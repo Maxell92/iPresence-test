@@ -33,7 +33,7 @@ final class AuthorCollection implements Iterator
     public function __construct(array $data)
     {
         foreach ($data as $item) {
-            if (!isset($item['author'], $item['quote'])) {
+            if (! isset($item['author'], $item['quote'])) {
                 throw new InvalidResourceException('Authors cannot be loaded.');
             }
 

@@ -16,29 +16,29 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 final class ShoutDataPersister implements DataPersisterInterface
 {
-	/**
-	 * @var ShoutOperation
-	 */
-	private $shoutOperation;
+    /**
+     * @var ShoutOperation
+     */
+    private $shoutOperation;
 
-	public function __construct(ShoutOperation $shoutOperation)
-	{
-		$this->shoutOperation = $shoutOperation;
-	}
+    public function __construct(ShoutOperation $shoutOperation)
+    {
+        $this->shoutOperation = $shoutOperation;
+    }
 
-	/**
-	 * @param mixed|object $data
-	 */
-	public function supports($data): bool
-	{
-		return $data instanceof Shout;
-	}
+    /**
+     * @param mixed|object $data
+     */
+    public function supports($data): bool
+    {
+        return $data instanceof Shout;
+    }
 
-	/**
-	 * @param Shout $data
-	 */
-	public function persist($data): Response
-	{
+    /**
+     * @param Shout $data
+     */
+    public function persist($data): Response
+    {
         try {
             return $this->shoutOperation->shout($data);
         } catch (AuthorNotFoundException | InvalidResourceException | NotEnoughQuotesException $e) {
@@ -50,13 +50,13 @@ final class ShoutDataPersister implements DataPersisterInterface
         }
     }
 
-	/**
-	 * @param Shout $data
-	 *
-	 * @throws NotFoundHttpException
-	 */
-	public function remove($data): void
-	{
-		throw new NotFoundHttpException('Shout resource cannot be deleted');
-	}
+    /**
+     * @param Shout $data
+     *
+     * @throws NotFoundHttpException
+     */
+    public function remove($data): void
+    {
+        throw new NotFoundHttpException('Shout resource cannot be deleted');
+    }
 }
